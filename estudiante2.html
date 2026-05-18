@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Estudiante 2</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+<section class="student-page">
+
+<a
+href="estudiantes.html"
+class="btn back-btn">
+
+← Volver
+
+</a>
+
+
+
+<h1 id="studentTitle2">
+Estudiante 2
+</h1>
+
+
+
+<div class="student-card">
+
+<div class="student-info">
+
+<h2>Información Personal</h2>
+
+
+
+<textarea
+id="text2"
+placeholder="Escribe aquí la información...">
+</textarea>
+
+
+
+<button
+class="save-btn"
+onclick="saveText('text2')">
+
+Guardar Información
+
+</button>
+
+</div>
+
+
+
+<div class="student-files">
+
+<h2>Subir Imágenes</h2>
+
+
+
+<input
+type="file"
+accept="image/*"
+onchange="uploadImage(this, 'preview2')">
+
+
+
+<div id="preview2"></div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+<span
+class="close"
+onclick="closeModal()">
+
+&times;
+
+</span>
+
+<img id="modal-img">
+
+</div>
+
+
+
+<!-- FIREBASE -->
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+getFirestore,
+doc,
+setDoc,
+getDoc
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyC01MCiGZB1KQaDJdKpMBM7F3yWrfqraJo",
+
+authDomain: "contaduria-etica.firebaseapp.com",
+
+projectId: "contaduria-etica",
+
+storageBucket: "contaduria-etica.firebasestorage.app",
+
+messagingSenderId: "557608124915",
+
+appId: "1:557608124915:web:43af67b346d422f0695286",
+
+measurementId: "G-HDSH1M0BG0"
+
+};
+
+
+
+const app =
+initializeApp(firebaseConfig);
+
+
+
+const db =
+getFirestore(app);
+
+
+
+window.db = db;
+window.doc = doc;
+window.setDoc = setDoc;
+window.getDoc = getDoc;
+
+</script>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

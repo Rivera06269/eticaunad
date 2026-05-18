@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Ética Profesional</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+<header class="hero">
+
+<nav class="navbar">
+
+<h1 class="logo">
+Ética Profesional
+</h1>
+
+
+
+<ul class="menu">
+
+<li>
+<a href="index.html">
+Inicio
+</a>
+</li>
+
+<li>
+<a href="responsabilidad.html">
+Responsabilidad Ética
+</a>
+</li>
+
+<li>
+<a href="estudiantes.html">
+Estudiantes
+</a>
+</li>
+
+<li>
+<a href="caso.html">
+Estudio de Caso
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+
+<div class="hero-content">
+
+<h2>
+Ética y Responsabilidad
+en los Contadores Públicos
+</h2>
+
+<p>
+Página colaborativa sobre ética profesional,
+responsabilidad y análisis de casos.
+</p>
+
+<a
+href="estudiantes.html"
+class="btn">
+
+Explorar Proyecto
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- FIREBASE -->
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+getFirestore,
+doc,
+setDoc,
+getDoc
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyC01MCiGZB1KQaDJdKpMBM7F3yWrfqraJo",
+
+authDomain: "contaduria-etica.firebaseapp.com",
+
+projectId: "contaduria-etica",
+
+storageBucket: "contaduria-etica.firebasestorage.app",
+
+messagingSenderId: "557608124915",
+
+appId: "1:557608124915:web:43af67b346d422f0695286",
+
+measurementId: "G-HDSH1M0BG0"
+
+};
+
+
+
+const app =
+initializeApp(firebaseConfig);
+
+
+
+const db =
+getFirestore(app);
+
+
+
+window.db = db;
+window.doc = doc;
+window.setDoc = setDoc;
+window.getDoc = getDoc;
+
+</script>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
