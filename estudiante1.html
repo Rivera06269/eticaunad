@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Estudiante 1</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+<section class="student-page">
+
+<a
+href="estudiantes.html"
+class="btn back-btn">
+
+← Volver
+
+</a>
+
+
+
+<h1 id="studentTitle1">
+Estudiante 1
+</h1>
+
+
+
+<div class="student-card">
+
+<div class="student-info">
+
+<h2>Información Personal</h2>
+
+
+
+<textarea
+id="text1"
+placeholder="Escribe aquí la información...">
+</textarea>
+
+
+
+<button
+class="save-btn"
+onclick="saveText('text1')">
+
+Guardar Información
+
+</button>
+
+</div>
+
+
+
+<div class="student-files">
+
+<h2>Subir Imágenes</h2>
+
+
+
+<input
+type="file"
+accept="image/*"
+onchange="uploadImage(this, 'preview1')">
+
+
+
+<div id="preview1"></div>
+
+
+
+<h2>Subir Documentos</h2>
+
+
+
+<input
+type="file"
+accept=".pdf,.doc,.docx">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+<span
+class="close"
+onclick="closeModal()">
+
+&times;
+
+</span>
+
+<img id="modal-img">
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
